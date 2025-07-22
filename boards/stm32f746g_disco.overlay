@@ -1,0 +1,28 @@
+/ {
+    aliases {
+        stepper1 = &stepper_driver;
+    };
+
+};
+
+&timers3 {
+	status = "okay";
+
+	pwm3: pwm {
+		compatible = "st,stm32-pwm";
+		status = "okay";
+		#pwm-cells = <3>;
+		pinctrl-0 = <&tim3_ch1_pb4>; 
+		pinctrl-names = "default";
+	};
+};
+
+
+
+/{
+	stepper_driver: stepper_driver{
+		compatible = "stepper";
+		pwms  = <&pwm3 1 PWM_USEC(1000) PWM_POLARITY_NORMAL>;
+		dir-gpios = <&gpiob 9 GPIO_ACTIVE_HIGH>;
+	};
+};

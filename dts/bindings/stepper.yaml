@@ -1,0 +1,17 @@
+compatible: "stepper"
+description: Stepper Motor driver
+include: base.yaml
+
+properties:
+  pwms:
+    required: true
+    type: phandle-array
+    description: PWM for steps of stepper 
+  
+  dir-gpios:
+    required: true
+    type: phandle-array
+    description: direcction_pin
+
+
+  

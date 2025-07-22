@@ -1,0 +1,15 @@
+/ {leds {
+    compatible = "gpio-leds";
+
+    leddir: led_dir {
+        gpios = <&gpiob 9 GPIO_ACTIVE_HIGH>;
+    };
+};
+
+
+    aliases {
+        dir = &leddir;
+    };
+
+};
+
