@@ -12,6 +12,12 @@ properties:
     required: true
     type: phandle-array
     description: direcction_pin
+  
+  limit-gpios:
+    required: true
+    type: phandle-array
+    description: limit_switches
+    
 
 
   

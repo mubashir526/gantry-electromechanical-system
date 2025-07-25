@@ -24,5 +24,7 @@
 		compatible = "stepper";
 		pwms  = <&pwm3 1 PWM_USEC(1000) PWM_POLARITY_NORMAL>;
 		dir-gpios = <&gpiob 9 GPIO_ACTIVE_HIGH>;
+		limit-gpios = <&gpiob 8 GPIO_ACTIVE_LOW >,
+					<&gpiob 14 GPIO_ACTIVE_LOW>;
 	};
 };
